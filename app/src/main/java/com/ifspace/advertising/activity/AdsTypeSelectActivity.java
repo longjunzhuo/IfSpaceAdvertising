@@ -11,7 +11,7 @@ import com.ifspace.advertising.R;
 /**
  * Created by sheng on 19/9/1.
  */
-public class MainActivity extends Activity implements View.OnClickListener {
+public class AdsTypeSelectActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
     private void startAdvertisingActivity(int type) {
-        Intent intent = new Intent(this, ShowAdActivity.class);
+        Intent intent = new Intent(this, ShowAdsActivity.class);
         intent.putExtra(Constants.IntentExtra.SHOW_AD_SELECT_TYPE, type);
         startActivity(intent);
     }

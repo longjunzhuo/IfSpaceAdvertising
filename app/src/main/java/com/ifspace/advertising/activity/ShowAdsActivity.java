@@ -24,9 +24,9 @@ import org.greenrobot.eventbus.ThreadMode;
 /**
  * Created by sheng on 19/9/1.
  */
-public class ShowAdActivity extends Activity {
+public class ShowAdsActivity extends Activity {
 
-    private static final String TAG = "ShowAdActivity";
+    private static final String TAG = "ShowAdsActivity";
     private ProgressBar mProgressBar;
     private View mShowContainer;
     private TextView mTitleView;
