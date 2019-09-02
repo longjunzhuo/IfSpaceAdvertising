@@ -200,7 +200,7 @@ public class ShowAdsActivity extends Activity {
                 titleView.setVisibility(View.VISIBLE);
                 titleView.setText(title);
             } else {
-                titleView.setVisibility(View.VISIBLE);
+                titleView.setVisibility(View.GONE);
             }
 
             if (!TextUtils.isEmpty(scrollText)) {
@@ -208,7 +208,7 @@ public class ShowAdsActivity extends Activity {
                 scrollTextView.setText(scrollText);
                 scrollTextView.setSelected(true);
             } else {
-                scrollTextView.setVisibility(View.VISIBLE);
+                scrollTextView.setVisibility(View.GONE);
             }
 
             if (!TextUtils.isEmpty(ads.getImg())) {
