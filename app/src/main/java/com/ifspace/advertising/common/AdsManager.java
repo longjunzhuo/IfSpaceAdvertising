@@ -6,6 +6,7 @@ import com.ifspace.advertising.http.AdsAPI;
 import com.ifspace.advertising.http.AdsFetcher;
 import com.ifspace.advertising.http.HttpRequestFactor;
 import com.ifspace.advertising.model.AdsData;
+import com.ifspace.advertising.model.AdsStatus;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -65,7 +66,7 @@ public class AdsManager {
                     @Override
                     public void onError(Throwable e) {
                         Log.d(TAG, "onError:" + e.getMessage());
-                        notifyRequestError(AdsAPI.RESULT_CODE_ERROR);
+                        notifyRequestError(AdsStatus.STATE_REQUEST_ERROR);
                     }
 
                     @Override
@@ -81,7 +82,7 @@ public class AdsManager {
     }
 
     private void notifyRequestError(int type) {
-       /* TranslationError error = new TranslationError(type);
-        EventBus.getDefault().post(error);*/
+        AdsStatus adsStatus = new AdsStatus(type);
+        EventBus.getDefault().post(adsStatus);
     }
 }

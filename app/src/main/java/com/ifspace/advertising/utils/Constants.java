@@ -6,11 +6,13 @@ package com.ifspace.advertising.utils;
 
 public class Constants {
 
-    public enum ShowType {
-        SINGLE_IMG,
-        TWO_IMG,
-        THREE_IMG,
-        FOUR_IMG
+    public static final String TAG = "IfSpaceAds";
+
+    public static class ShowType {
+        public static final int SINGLE_IMG = 1;
+        public static final int TWO_IMG = 2;
+        public static final int THREE_IMG = 3;
+        public static final int FOUR_IMG = 4;
     }
 
     public class IntentExtra {

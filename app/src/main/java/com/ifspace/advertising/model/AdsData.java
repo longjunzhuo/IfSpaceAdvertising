@@ -74,14 +74,14 @@ public class AdsData {
     }
 
     public static class AdsList {
-        private String type;
+        private int type;
         private List<Ads> ads;
 
-        public String getType() {
+        public int getType() {
             return type;
         }
 
-        public void setType(String type) {
+        public void setType(int type) {
             this.type = type;
         }
 

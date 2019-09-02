@@ -29,19 +29,19 @@ public class AdsTypeSelectActivity extends Activity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        int showType = Constants.ShowType.SINGLE_IMG.ordinal();
+        int showType = Constants.ShowType.SINGLE_IMG;
         switch (v.getId()) {
             case R.id.advertising_show_type_1:
-                showType = Constants.ShowType.SINGLE_IMG.ordinal();
+                showType = Constants.ShowType.SINGLE_IMG;
                 break;
             case R.id.advertising_show_type_2:
-                showType = Constants.ShowType.TWO_IMG.ordinal();
+                showType = Constants.ShowType.TWO_IMG;
                 break;
             case R.id.advertising_show_type_3:
-                showType = Constants.ShowType.THREE_IMG.ordinal();
+                showType = Constants.ShowType.THREE_IMG;
                 break;
             case R.id.advertising_show_type_4:
-                showType = Constants.ShowType.FOUR_IMG.ordinal();
+                showType = Constants.ShowType.FOUR_IMG;
                 break;
         }
         startAdvertisingActivity(showType);

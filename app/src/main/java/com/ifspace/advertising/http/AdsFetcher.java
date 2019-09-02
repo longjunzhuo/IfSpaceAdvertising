@@ -1,7 +1,9 @@
 package com.ifspace.advertising.http;
 
 import android.util.Log;
+
 import com.ifspace.advertising.model.AdsData;
+
 import io.reactivex.Observable;
 
 /**
@@ -21,8 +23,7 @@ public class AdsFetcher {
 
         Log.d(HttpClient.TAG, "请求参数:" + " showType:" + showType);
         Log.d(HttpClient.TAG, "请求参数:" + " imei:" + imei);
-
-        Observable<AdsData> observable = mTranslatorApi.getIfspaceAdsObservable(imei, String.valueOf(showType));
+        Observable<AdsData> observable = mTranslatorApi.getIfspaceAdsObservable(imei, showType > 0 && showType <= 4 ? String.valueOf(showType):null);
         return observable;
     }
 }
