@@ -58,8 +58,8 @@ public class AdsTypeSelectActivity extends Activity implements View.OnClickListe
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onPause() {
+        super.onPause();
         mHandler.removeCallbacks(mAutoSelectRunnable);
     }
 
