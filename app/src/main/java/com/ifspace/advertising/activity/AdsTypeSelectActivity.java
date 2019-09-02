@@ -3,6 +3,7 @@ package com.ifspace.advertising.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import com.ifspace.advertising.utils.Constants;
@@ -13,11 +14,20 @@ import com.ifspace.advertising.R;
  */
 public class AdsTypeSelectActivity extends Activity implements View.OnClickListener {
 
+    private static final int ADS_AUTO_SELECT_DELAY = 30000;
+    private Handler mHandler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mHandler.postDelayed(mAutoSelectRunnable, ADS_AUTO_SELECT_DELAY);
     }
 
     private void initView() {
@@ -44,11 +54,24 @@ public class AdsTypeSelectActivity extends Activity implements View.OnClickListe
                 showType = Constants.ShowType.FOUR_IMG;
                 break;
         }
-        startAdvertisingActivity(showType);
+        startAdsActivity(showType);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mHandler.removeCallbacks(mAutoSelectRunnable);
+    }
 
-    private void startAdvertisingActivity(int type) {
+    private Runnable mAutoSelectRunnable = new Runnable() {
+        @Override
+        public void run() {
+            startAdsActivity(Constants.ShowType.SINGLE_IMG);
+        }
+    };
+
+
+    private void startAdsActivity(int type) {
         Intent intent = new Intent(this, ShowAdsActivity.class);
         intent.putExtra(Constants.IntentExtra.SHOW_AD_SELECT_TYPE, type);
         startActivity(intent);

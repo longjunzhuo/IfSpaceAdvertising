@@ -3,7 +3,7 @@ package com.ifspace.advertising.service;
 import cn.jpush.android.service.JCommonService;
 
 /**
- * @author jiangxusheng@meizu.com
+ * @author jiangxusheng
  */
 public class JPushService extends JCommonService {
 }

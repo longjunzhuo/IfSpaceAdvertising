@@ -45,7 +45,7 @@ public class PhoneUtils {
             try {
                 sSN = (String) (ReflectHelper.invokeStatic("android.os.Build", "getSerial", new Object[]{}));
             } catch (Exception e) {
-                com.meizu.statsapp.v3.utils.log.Logger.e(TAG, e.getMessage());
+
             }
         }
         return sSN;

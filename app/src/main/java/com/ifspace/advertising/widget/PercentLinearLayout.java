@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 /**
- * @author jiangxusheng@meizu.com
+ * @author jiangxusheng
  */
 public class PercentLinearLayout extends LinearLayout {
 

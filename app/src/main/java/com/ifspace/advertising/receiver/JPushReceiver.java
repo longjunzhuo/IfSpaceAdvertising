@@ -15,7 +15,7 @@ import cn.jpush.android.api.CustomMessage;
 import cn.jpush.android.service.JPushMessageReceiver;
 
 /**
- * @author jiangxusheng@meizu.com
+ * @author jiangxusheng
  */
 public class JPushReceiver extends JPushMessageReceiver {
 

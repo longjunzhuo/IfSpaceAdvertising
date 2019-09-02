@@ -5,7 +5,7 @@ import android.app.Application;
 import cn.jpush.android.api.JPushInterface;
 
 /**
- * @author jiangxusheng@meizu.com
+ * @author jiangxusheng
  */
 public class AdsApplication extends Application {
     @Override

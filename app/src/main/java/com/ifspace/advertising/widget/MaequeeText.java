@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * @author jiangxusheng@meizu.com
+ * @author jiangxusheng
  */
 public class MaequeeText extends TextView {
 
